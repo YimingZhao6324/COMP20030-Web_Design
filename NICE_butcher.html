@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="shortcut icon" href="Media/NICE.ico" type="image/x-icon">
+    <title>NICE butcher</title>
+    <style>
+
+        body {
+            background-image: url('Media/steak-4581290_1280.jpg');
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title_f">
+        WELCOME TO NICE butcher!
+    </h1>
+    <h2 style="color:antiquewhite;text-shadow:0.2em 0.2em black;text-align: center;">NICE butcher make nice meat since 2020</h2>
+    <div style="width:100%;float:left">
+        <table class="table_f">
+            <caption style="background-color: orangered;">Price list of types of meat we make</caption>
+
+            <tr>
+                <td>Name</td>
+                <td>Price(per kilo)</td>
+            </tr>
+            <tr>
+                <td>The NICE Beef</td>
+                <td>$8</td>
+            </tr>
+            <tr>
+                <td>The NICE Pork</td>
+                <td>$9</td>
+            </tr>
+            <tr>
+                <td>The NICE Lamb</td>
+                <td>$12</td>
+            </tr>
+            <tr>
+                <td>The NICE Sausage</td>
+                <td>$8</td>
+            </tr>
+        </table>
+    </div>
+    <br />
+    <p style="color:antiquewhite;text-shadow:0.2em 0.2em black;text-align: center;">Want to take a order?</p>
+    <div style="text-align:center; vertical-align:middle;">
+        <form action="adding calculator">
+            <label for="beef" style="color:antiquewhite;text-shadow:0.09em 0.09em black">Kilo of The NICE Beef:</label>
+            <input type="number" id="tb1" name="tb1"><br><br>
+            <label for="pork" style="color:antiquewhite;text-shadow:0.09em 0.09em black">Bags of The NICE Pork:</label>
+            <input type="number" id="tb2" name="tb2"><br><br>
+            <label for="lamb" style="color:antiquewhite;text-shadow:0.09em 0.09em black">Bags of The NICE Lamb:</label>
+            <input type="number" id="tb3" name="tb3"><br><br>
+            <label for="srai" style="color:antiquewhite;text-shadow:0.09em 0.09em black">Bags of The NICE Sausage:</label>
+            <input type="number" id="tb4" name="tb4"><br><br>
+            <label for="sausage" style="color:antiquewhite;text-shadow:0.09em 0.09em black">Price:</label>
+            <input type="text" id="tb5" name="tb5"><br><br>
+            <button type="button" id="b1">Get The Price!</button>
+        </form>
+        <script type="text/javascript">
+            document.getElementById("b1").addEventListener("click", b1);
+
+            function b1() {
+                var add1 = document.getElementById("tb1").value;
+                var add2 = document.getElementById("tb2").value;
+                var add3 = document.getElementById("tb3").value;
+                var add4 = document.getElementById("tb4").value;
+                document.getElementById("tb5").value = add1 * 8 + add2 * 9 + add3 * 12 + add4 * 8;
+            }
+        </script>
+        </div>
+<footer class="footer_f"><p>Contact Number: 080-808080808</p><br /><p>Made by Yiming Zhao,19353281 Allright reserved ©2020</p></footer>
+</body>
+</html>

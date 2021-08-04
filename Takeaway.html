@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="shortcut icon" href="Media/BIG.ico" type="image/x-icon">
+    <style>
+
+        body {
+            background-image: url('Media/coffee-break-2383073_1280.png');
+            background-size: cover;
+        }
+    </style>
+    <title>
+        "Takeaway"
+    </title>
+</head>
+<body>
+
+    <div style="background-color:black;opacity:0.8;z-index:1">
+        <a href="index.html" style="text-decoration: none;color: white"><h1 style="font-family: 'Times New Roman', Times, serif;color: white;text-align: center">The Big Big Small Cafe</h1></a>
+        <table style=" margin: auto;">
+            <tr>
+                <td>
+                    <nav id="menu">
+                        <ul>
+
+                            <li style="float: left;padding-right:10em;color:white">
+                                <a>Our suppliers</a>
+                                <ul>
+                                    <li><a href="NICE_flour.html">NICE flour</a></li>
+                                    <li><a href="NICE_butcher.html">NICE butcher</a></li>
+                                </ul>
+                            </li>
+                            <li style="float: left;padding-right:10em;color:white">
+                                <a>Our menu</a>
+                                <ul>
+                                    <li><a href="In_hall.html">In hall</a></li>
+                                    <li><a href="Takeaway.html">Take away</a></li>
+                                </ul>
+                            </li>
+                            <li style="float: left;padding-right:10em;color:white"><a href="Join_us.html" style="text-decoration: none;color: white">Join us</a></li>
+                            <li style="float: left;color:white"><a href="Booking.html" style="text-decoration: none;color: white">Book a seat</a></li>
+                        </ul>
+                    </nav>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br /><br />
+          <div id="contant">
+              
+              <br />
+              <h2 class="text">Takeaway</h2><br />
+              <p class="text">$3 is charged for delivery if the total cost is under $20</p>
+              <table class="table">
+                  <caption style="background-color: red;color:dimgray">Menu For In Hall</caption>
+
+
+                  <tr>
+                      <td class="text">Name</td>
+                      <td class="text">Price</td>
+                  </tr>
+                  <tr>
+                      <td class="text">The BIG Sandwich</td>
+                      <td class="text">$13</td>
+                  </tr>
+                  <tr>
+                      <td class="text">The BIG style tea</td>
+                      <td class="text">$3</td>
+                  </tr>
+                  <tr>
+                      <td class="text">The BIG croissant</td>
+                      <td class="text">$4</td>
+                  </tr>
+                  <tr>
+                      <td class="text">The BIG Soup</td>
+                      <td class="text">$4</td>
+                  </tr>
+
+
+
+
+              </table>
+              <br />
+              <form action="summary.php" method="get">
+                  <label for="SW" style="color:dimgray">Address Line 1:</label>
+                  <input type="text" name="Address1" value=""><br /><br />
+                  <label for="SW" style="color:dimgray">Address Line 2:</label>
+                  <input type="text" name="Address2" value=""><br /><br />
+                  <label for="SW" style="color:dimgray">Portions of The BIG Sandwich:</label>
+                  <input type="number" id="tb1" name="tb1"><br /><br />
+                  <label for="TE" style="color:dimgray">Portions of The BIG style tea:</label>
+                  <input type="number" id="tb2" name="tb2"><br /><br />
+                  <label for="CR" style="color:dimgray">Portions of The BIG croissant:</label>
+                  <input type="number" id="tb3" name="tb3"><br /><br />
+                  <label for="SO" style="color:dimgray">Portions of The BIG Soup:</label>
+                  <input type="number" id="tb4" name="tb4"><br /><br />
+                  <label for="PR" style="color:dimgray">Price:</label>
+                  <input type="text" id="tb5" name="tb5"><br /><br />
+                  <button type="button" id="b1">Get the total Price</button>   <input type="submit" value="Make the delivery">
+              </form>
+              <script type="text/javascript">
+                  document.getElementById("b1").addEventListener("click", b1);
+
+                  function b1() {
+                      var add1 = document.getElementById("tb1").value;
+                      var add2 = document.getElementById("tb2").value;
+                      var add3 = document.getElementById("tb3").value;
+                      var add4 = document.getElementById("tb4").value;
+                      var res = add1 * 13 + add2 * 3 + add3 * 4 + add4 * 4;
+                      if (res < 20) {
+                          document.getElementById("tb5").value = add1 * 13 + add2 * 3 + add3 * 4 + add4 * 4 + 3
+                      }
+                      else {
+                          document.getElementById("tb5").value = add1 * 13 + add2 * 3 + add3 * 4 + add4 * 4;
+                      }
+                  }
+              </script>
+              <br /><br />
+          </div>
+    <br /><br />
+    <hr />
+    <div style="color:white;background-color:black;opacity:0.8;position:relative">
+        <img src="Media/BIG.ico" width="85" height="85" />
+        <p>Thanks for viewing!</p>
+        <p>
+            Address:<br />The Big Big Small Cafe
+            <br />Glovey Street
+            <br />Sand Andreas
+        </p>
+        <p>This is made by Yiming Zhao,19353281 Allright reserved ©2020</p>
+    </div>
+</body>
+</html>
